@@ -1,6 +1,7 @@
 plugins {
     application
     id("java")
+    checkstyle
 }
 
 group = "hexlet.code"
@@ -18,6 +19,15 @@ dependencies {
 
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
+}
+
+checkstyle {
+    toolVersion = "10.3.3"
+}
+tasks.withType<Checkstyle>().configureEach {
+    reports {
+        sarif.required = true
+    }
 }
 
 tasks.test {

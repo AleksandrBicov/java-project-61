@@ -1,8 +1,8 @@
 package hexlet.code;
-
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Welcome to the Brain Games!");
+final class Main {
+    private Main() {
+    }
+    public static void main(final String[] args) {
         Cli.askName();
     }
 }
