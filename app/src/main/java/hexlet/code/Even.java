@@ -14,7 +14,7 @@ final class Even {
                     minValue + (int) (Math.random() * (maxValue - minValue + 1));
             System.out.println(
                     "Answer 'yes' if the number is even, otherwise answer 'no'.");
-            System.out.println("qestion : " + randomValue);
+            System.out.println("Question : " + randomValue);
             System.out.println("Your answer: ");
             Scanner scan = new Scanner(System.in);
             String even;
