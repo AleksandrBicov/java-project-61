@@ -1,4 +1,5 @@
 package hexlet.code;
+import java.util.Locale;
 import java.util.Scanner;
 final class Even {
     private Even() {
@@ -20,15 +21,16 @@ final class Even {
             Scanner scan = new Scanner(System.in);
             String even;
             even = scan.nextLine();
-            String ansver;
+            even = even.toLowerCase();
+            String answer;
             if (randomValue % 2 == 0) {
-                ansver = "yes";
+                answer = "yes";
             } else {
-                ansver = "no";
+                answer = "no";
             }
-            if (!even.equals(ansver)) {
+            if (!even.equals(answer)) {
                 System.out.println("'" + even + "' is wrong answer ;"
-                        + "(. Correct answer was" + " '" + ansver + " '.\n"
+                        + "(. Correct answer was" + " '" + answer + " '.\n"
                         + "Let's try again," + name + "!");
                 return;
             }
