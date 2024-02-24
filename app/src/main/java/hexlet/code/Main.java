@@ -14,6 +14,9 @@ final class Main {
             case  (2):
                 Even.even();
                 break;
+            case  (3):
+                Calc.calc();
+                break;
             default:
                 break;
         }
