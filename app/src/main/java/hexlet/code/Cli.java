@@ -1,7 +1,10 @@
 package hexlet.code;
 import java.util.Scanner;
 final class Cli {
-    public static String name;
+    private static String name;
+    public static String getName() {
+        return name;
+    }
     private Cli() {
     }
     public static void askName() {

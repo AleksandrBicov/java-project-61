@@ -7,6 +7,7 @@ final class Even {
     }
     public static void even() {
         Cli.askName();
+        String name = Cli.getName();
         for (int i = 0; i < 3; i++) {
             int minValue = 1;
             int maxValue = 100;
@@ -28,12 +29,12 @@ final class Even {
             if (!even.equals(ansver)) {
                 System.out.println("'"+ even+ "' is wrong answer ;" +
                         "(. Correct answer was" + " '"+ ansver +" '.\n" +
-                        "Let's try again," + Cli.name + "!");
+                        "Let's try again," + name + "!");
                 return;
             }
             System.out.println("Correct!");
         }
-        System.out.println("Congratulations," + Cli.name + "!");
+        System.out.println("Congratulations," + name + "!");
     }
 
 }

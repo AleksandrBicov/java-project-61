@@ -3,7 +3,10 @@ package hexlet.code;
 import java.util.Scanner;
 
 final class Selection {
-    public static int selection;;
+    private static int selection;
+    public static int getSelection() {
+        return selection;
+    }
     private Selection() {
     }
     public static int gameSelection() {

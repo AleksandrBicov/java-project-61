@@ -4,7 +4,10 @@ final class Main {
     }
     public static void main(final String[] args) {
         Selection.gameSelection();
-        switch (Selection.selection) {
+        switch (Selection.getSelection()) {
+            case  (0):
+                System.out.println("Game exit");
+                break;
             case  (1):
                 Cli.askName();
                 break;
