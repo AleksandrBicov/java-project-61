@@ -3,6 +3,9 @@ package hexlet.code;
 import java.util.Scanner;
 
 final class Selection {
+    /**
+     * Menu selection game.
+     */
     private static int selection;
     public static int getSelection() {
         return selection;
