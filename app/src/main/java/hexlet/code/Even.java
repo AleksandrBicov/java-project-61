@@ -1,5 +1,4 @@
 package hexlet.code;
-import java.util.Locale;
 import java.util.Scanner;
 final class Even {
     private Even() {
@@ -7,9 +6,10 @@ final class Even {
     public static void even() {
         Cli.askName();
         String name = Cli.getName();
-        for (int index = 0; index < 3; index++) {
+        final int repeat = 3;
+        for (int index = 0; index < repeat; index++) {
             int minValue = 1;
-            int maxValue = 100;
+            final int maxValue = 10;
             int randomValue =
                     minValue
                             + (int) (Math.random() * (maxValue - minValue + 1));
