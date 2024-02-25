@@ -1,6 +1,9 @@
-package hexlet.code;
+package hexlet.code.games;
+import hexlet.code.Cli;
+import hexlet.code.Engine;
+
 import java.util.Scanner;
-final class Even {
+public final class Even {
     private Even() {
     }
     public static void even() {
@@ -13,25 +16,21 @@ final class Even {
             int randomValue =
                     minValue
                             + (int) (Math.random() * (maxValue - minValue + 1));
-            System.out.println(
-                    "Answer 'yes' if the number is even, "
-                            + "otherwise answer 'no'.");
-            System.out.println("Question : " + randomValue);
-            System.out.println("Your answer: ");
+            String question = "Answer 'yes' if the number is input, otherwise answer 'no'.";
+            String expression = "" + randomValue ;
+            Engine.hello(question,expression);
             Scanner scan = new Scanner(System.in);
-            String even;
-            even = scan.nextLine();
-            even = even.toLowerCase();
+            String input;
+            input = scan.nextLine();
+            input = input.toLowerCase();
             String answer;
             if (randomValue % 2 == 0) {
                 answer = "yes";
             } else {
                 answer = "no";
             }
-            if (!even.equals(answer)) {
-                System.out.println("'" + even + "' is wrong answer ;"
-                        + "(. Correct answer was" + " '" + answer + " '.\n"
-                        + "Let's try again," + name + "!");
+            if (!input.equals(answer)) {
+                Engine.loose(input, answer, name);
                 return;
             }
             System.out.println("Correct!");

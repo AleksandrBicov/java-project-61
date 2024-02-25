@@ -1,8 +1,11 @@
-package hexlet.code;
+package hexlet.code.games;
+
+import hexlet.code.Cli;
+import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-final class  Calc {
+public final class  Calc {
     private Calc() {
     }
     public static void calc() {
@@ -20,11 +23,11 @@ final class  Calc {
         int randomOperator =
             minValue + (int) (Math.random() * (maxOperator - minValue + 1));
         char operator = " +-*".charAt(randomOperator);
-        System.out.println("Question : " + randomValue
-                + operator + randomValue1);
-        System.out.println("Your answer: ");
+            String question = "What is the result of the expression?";
+            String expression = ""+ randomValue + operator + randomValue1;
+            Engine.hello(question,expression);
         Scanner scan = new Scanner(System.in);
-        int calc = scan.nextInt();
+        int input = scan.nextInt();
         int answer = 0;
             switch (operator) {
                 case ('+'):
@@ -39,10 +42,10 @@ final class  Calc {
                 default:
                     break;
             }
-        if (calc != answer) {
-            System.out.println("'" + calc + "' is wrong answer ;"
-                    + "(. Correct answer was" + " '" + answer + " '.\n"
-                    + "Let's try again," + name + "!");
+            String Input = "" + input;
+            String Answer = "" + answer;
+        if (input != answer) {
+            Engine.loose(Input, Answer, name);
             return;
         }
         System.out.println("Correct!");
