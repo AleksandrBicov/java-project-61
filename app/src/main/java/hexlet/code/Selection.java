@@ -3,6 +3,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.Gcd;
 
 import java.util.Scanner;
 
@@ -18,7 +19,8 @@ final class Selection {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet ");
         System.out.println("2 - Even ");
-        System.out.println("3 - Calc "); //3
+        System.out.println("3 - Calc ");
+        System.out.println("4 - GCD "); //
 
         System.out.println("0 - Exit ");
         selection = scanner.nextInt();
@@ -35,6 +37,9 @@ final class Selection {
                 break;
             case  (3):
                 Calc.calc();
+                break;
+            case  (4):
+                Gcd.gcd();
                 break;
             default:
                 break;
