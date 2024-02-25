@@ -24,8 +24,8 @@ public final class  Calc {
             minValue + (int) (Math.random() * (maxOperator - minValue + 1));
         char operator = " +-*".charAt(randomOperator);
             String question = "What is the result of the expression?";
-            String expression = ""+ randomValue + operator + randomValue1;
-            Engine.hello(question,expression);
+            String expression = "" + randomValue + operator + randomValue1;
+            Engine.hello(question, expression);
         Scanner scan = new Scanner(System.in);
         int input = scan.nextInt();
         int answer = 0;
@@ -42,10 +42,10 @@ public final class  Calc {
                 default:
                     break;
             }
-            String Input = "" + input;
-            String Answer = "" + answer;
+            String inputToString = "" + input;
+            String answerToString = "" + answer;
         if (input != answer) {
-            Engine.loose(Input, Answer, name);
+            Engine.loose(inputToString, answerToString, name);
             return;
         }
         System.out.println("Correct!");
