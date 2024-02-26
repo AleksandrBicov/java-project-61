@@ -9,7 +9,8 @@ public final class Engine {
         System.out.println("Your answer: ");
 
     }
-    public static void loose(final String even, final String answer, final String name) {
+    public static void loose(final String even,
+                             final String answer, final String name) {
         System.out.println("'" + even + "' is wrong answer ;"
                 + "(. Correct answer was" + " '" + answer + " '.\n"
                 + "Let's try again," + name + "!");
