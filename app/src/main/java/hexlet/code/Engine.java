@@ -1,13 +1,15 @@
 package hexlet.code;
 
-public class Engine {
-    public static void hello(String Question, String expression) {
-        System.out.println(Question);
-        System.out.println("Question : " + expression);
+public final class Engine {
+    private Engine() {
+    }
+    public static void hello(final String question, final String expression) {
+        System.out.println(question);
+        System.out.println("question : " + expression);
         System.out.println("Your answer: ");
 
     }
-    public static void loose(String even, String answer , String name) {
+    public static void loose(final String even, final String answer, final String name) {
         System.out.println("'" + even + "' is wrong answer ;"
                 + "(. Correct answer was" + " '" + answer + " '.\n"
                 + "Let's try again," + name + "!");

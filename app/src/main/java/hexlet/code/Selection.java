@@ -13,12 +13,16 @@ final class Selection {
     private Selection() {
     }
     public static void gameSelection() {
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
+        final int six = 6;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet ");
         System.out.println("2 - Even ");
         System.out.println("3 - Calc ");
-        System.out.println("4 - GCD "); //
+        System.out.println("4 - GCD ");
         System.out.println("5 - Progression ");
         System.out.println("6 - Prime ");
         System.out.println("0 - Exit ");
@@ -34,16 +38,16 @@ final class Selection {
             case  (2):
                 Even.even();
                 break;
-            case  (3):
+            case  (three):
                 Calc.calc();
                 break;
-            case  (4):
+            case  (four):
                 Gcd.gcd();
                 break;
-            case  (5):
+            case  (five):
                 Progression.progression();
                 break;
-            case  (6):
+            case  (six):
                Prime.prime();
                 break;
             default:

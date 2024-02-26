@@ -46,20 +46,21 @@ public final class Gcd {
         public static void progression() {
             final int minValue = 1;
             final int maxValue = 9;
-            int[] array = new int[10];
+            final int newArr = 10;
+            int[] array = new int[newArr];
             int randomValue =
-                    minValue + (int) (Math.random() * (maxValue - minValue + 1));
+               minValue + (int) (Math.random() * (maxValue - minValue + 1));
             int randomValue1 =
-                    minValue + (int) (Math.random() * (maxValue - minValue + 1));
+               minValue + (int) (Math.random() * (maxValue - minValue + 1));
             int randomValue2 =
-                    minValue + (int) (Math.random() * (maxValue - minValue + 1));
+               minValue + (int) (Math.random() * (maxValue - minValue + 1));
             array[0] = randomValue1;
-            for(int i = 1; i < 10; i++){
-                array[i] = randomValue + array[i -1];
+            for (int i = 1; i < newArr; i++) {
+                array[i] = randomValue + array[i - 1];
             }
             array[randomValue2] = 0;
             String arr = Arrays.toString(array);
-            String arr2 = arr.substring(1, arr.length()-1);
+            String arr2 = arr.substring(1, arr.length() - 1);
             String arr3 = arr2.replace(",", "");
             String arr4 = arr3.replace(" 0", " ..");
             System.out.println(arr4);

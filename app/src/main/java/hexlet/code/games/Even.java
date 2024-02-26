@@ -16,9 +16,10 @@ public final class Even {
             int randomValue =
                     minValue
                             + (int) (Math.random() * (maxValue - minValue + 1));
-            String question = "Answer 'yes' if the number is input, otherwise answer 'no'.";
-            String expression = "" + randomValue ;
-            Engine.hello(question,expression);
+            String question =
+               "Answer 'yes' if the number is input, otherwise answer 'no'.";
+            String expression = "" + randomValue;
+            Engine.hello(question, expression);
             Scanner scan = new Scanner(System.in);
             String input;
             input = scan.nextLine();

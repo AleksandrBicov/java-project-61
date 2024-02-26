@@ -14,9 +14,9 @@ final public class Progression {
         final int minValue = 1;
         final int maxValue = 9;
         final int repeat = 3;
-
+        final int newArr = 10;
         for (int i = 0; i < repeat; i++) {
-            int[] array = new int[10];
+            int[] array = new int[newArr];
             int randomValue =
               minValue + (int) (Math.random() * (maxValue - minValue + 1));
             int randomValue1 =
@@ -25,7 +25,7 @@ final public class Progression {
               minValue + (int) (Math.random() * (maxValue - minValue + 1));
 
             array[0] = randomValue1;
-            for (int j = 1; j < 10; j++) {
+            for (int j = 1; j < newArr; j++) {
                 array[j] = randomValue + array[j - 1];
             }
             array[randomValue2] = 0;
