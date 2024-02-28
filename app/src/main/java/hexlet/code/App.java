@@ -1,23 +1,21 @@
-
 package hexlet.code;
 
 import hexlet.code.games.*;
 
 import java.util.Scanner;
 
-final class Selection {
-    /**
-     * Menu selection game.
-     */
-    private static int selection;
-    private Selection() {
+final class App {
+    private App() {
     }
+    public static void main(final String[] args) {
+        gameSelection();
+    }
+    private static int selection;
     public static void gameSelection() {
         final int three = 3;
         final int four = 4;
         final int five = 5;
         final int six = 6;
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet ");
         System.out.println("2 - Even ");
@@ -26,6 +24,7 @@ final class Selection {
         System.out.println("5 - Progression ");
         System.out.println("6 - Prime ");
         System.out.println("0 - Exit ");
+        Scanner scanner = new Scanner(System.in);
         selection = scanner.nextInt();
         System.out.println("Your choice: " + selection);
         switch (selection) {
@@ -48,7 +47,7 @@ final class Selection {
                 Progression.progression();
                 break;
             case  (six):
-               Prime.prime();
+                Prime.prime();
                 break;
             default:
                 break;
