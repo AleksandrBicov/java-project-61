@@ -4,8 +4,6 @@ import hexlet.code.Cli;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Scanner;
-
 public final class Prime {
     private Prime() {
     }
