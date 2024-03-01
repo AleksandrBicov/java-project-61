@@ -19,12 +19,11 @@ public final class  Calc {
             char operator = " +-*".charAt(randomOperator);
             String question = "What is the result of the expression?";
             String expression = "" + randomValue + operator + randomValue1;
-            int answer = Calc.gameCalc(randomValue, randomValue1, operator);
+            int answer = gameCalc(randomValue, randomValue1, operator);
             int input = Engine.engine(question, expression, answer,index);
             if (input != answer) {
                 return;
             }
-
         }
     }
     public static int gameCalc(int randomValue,int randomValue1,char operator ){
