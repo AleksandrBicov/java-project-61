@@ -4,15 +4,12 @@ import hexlet.code.Cli;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Arrays;
-import java.util.Scanner;
 
 public final class Gcd {
     private Gcd() {
     }
     public static void gcd() {
         Cli.askName();
-        String name = Cli.getName();
         final int repeat = 3;
         for (int index = 0; index < repeat; index++) {
             int randomValue = Utils.generateNumber(1, 100);
