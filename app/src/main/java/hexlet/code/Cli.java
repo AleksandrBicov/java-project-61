@@ -11,6 +11,7 @@ public final class Cli {
         name = scanner.nextLine();
         System.out.println("Hello, " + name + "!");
 
+
         // scanner.close();
         // Если добавляю эту строку весь проект падает с ошибкой
         // Execution failed for task ':App.main()'.
