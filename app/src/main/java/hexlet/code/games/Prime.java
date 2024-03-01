@@ -2,6 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.Scanner;
 
@@ -10,39 +11,28 @@ public final class Prime {
     }
     public static void prime() {
         Cli.askName();
-        String name = Cli.getName();
-        final int minValue = 1;
-        final int maxValue = 500;
         final int repeat = 3;
-        for (int i = 0; i < repeat; i++) {
-            int randomValue =
-                minValue + (int) (Math.random() * (maxValue - minValue + 1));
+        for (int index = 0; index < repeat; index++) {
+            int randomValue = Utils.generateNumber(1, 500);
             String question =
                "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
             String expression = "" + randomValue;
-
-            Engine.hello(question, expression);
-
-            Scanner scan = new Scanner(System.in);
-            String input = scan.nextLine();
-
+            String answer = gamePrime(randomValue);
+            String input = Engine.engine(question, expression, answer,index);
             input = input.toLowerCase();
-            String answer;
-
-            if (isSimple(randomValue)) {
-                answer = "yes";
-            } else {
-                answer = "no";
-            }
-
             if (!input.equals(answer)) {
-                Engine.loose(input, answer, name);
                 return;
             }
-
-            System.out.println("Correct!");
         }
-        System.out.println("Congratulations," + name + "!");
+    }
+    public static String gamePrime(int randomValue) {
+        String answer;
+        if (isSimple(randomValue)) {
+            answer = "yes";
+        } else {
+            answer = "no";
+        }
+        return answer;
     }
     public static boolean isSimple(final int number) {
         if (number < 2) {
