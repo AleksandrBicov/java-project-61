@@ -6,7 +6,7 @@ public final class Engine {
     private Engine() {
     }
     public static String engine(String question,String expression,String answer,int index) {
-        String name = Cli.getName();
+        String name = Cli.name;
         hello(question,expression);
         Scanner scan = new Scanner(System.in);
         String inputString = scan.nextLine();
@@ -20,7 +20,7 @@ public final class Engine {
         return inputString;
     }
     public static int engine(String question,String expression,int answer,int index) {
-        String name = Cli.getName();
+        String name = Cli.name;
         hello(question,expression);
         Scanner scan = new Scanner(System.in);
         int input = scan.nextInt();
@@ -46,7 +46,7 @@ public final class Engine {
                 + "Let's try again," + name + "!");
     }
     public static void Congratulations(int index) {
-        String name = Cli.getName();
+        String name = Cli.name;
         final int repeat = 2;
         if (index == repeat) {
             System.out.println("Congratulations," + name + "!");
