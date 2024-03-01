@@ -2,57 +2,37 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 import hexlet.code.Engine;
-import java.util.Arrays;
-import java.util.Scanner;
+import hexlet.code.Utils;
 
+import java.util.Arrays;
 final public class Progression {
     private Progression() {
-  }
+    }
     public static void progression() {
         Cli.askName();
-        String name = Cli.getName();
-        final int minValue = 1;
-        final int maxValue = 9;
         final int repeat = 3;
         final int newArr = 10;
-        for (int i = 0; i < repeat; i++) {
+        for (int index = 0; index < repeat; index++) {
             int[] array = new int[newArr];
-            int randomValue =
-              minValue + (int) (Math.random() * (maxValue - minValue + 1));
-            int randomValue1 =
-              minValue + (int) (Math.random() * (maxValue - minValue + 1));
-            int randomValue2 =
-              minValue + (int) (Math.random() * (maxValue - minValue + 1));
-
+            int randomValue = Utils.generateNumber(1, 10);
+            int randomValue1 = Utils.generateNumber(1, 10);
+            int randomValue2 = Utils.generateNumber(1, 10);
             array[0] = randomValue1;
-            for (int j = 1; j < newArr; j++) {
-                array[j] = randomValue + array[j - 1];
+            for (int i = 1; i < newArr; i++) {
+                array[i] = randomValue + array[i - 1];
             }
-            array[randomValue2] = 0;
 
+            array[randomValue2] = 0;
+            String question = "What number is missing in the progression?";
             String arr = Arrays.toString(array);
             String arr2 = arr.substring(1, arr.length() - 1);
             String arr3 = arr2.replace(",", "");
-
-            String question = "What number is missing in the progression?";
             String expression = arr3.replace(" 0", " ..");
-
-            Engine.hello(question, expression);
-
-            Scanner scan = new Scanner(System.in);
-            int input = scan.nextInt();
             int answer = randomValue * randomValue2 + randomValue1;
-
-            String inputToString = "" + input;
-            String answerToString = "" + answer;
-
+            int input = Engine.engine(question, expression, answer,index);
             if (input != answer) {
-                Engine.loose(inputToString, answerToString, name);
                 return;
             }
-            System.out.println("Correct!");
+        }
     }
-        System.out.println("Congratulations," + name + "!");
-
-  }
 }
