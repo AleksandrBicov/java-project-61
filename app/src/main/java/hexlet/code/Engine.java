@@ -12,6 +12,7 @@ public final class Engine {
         hello(question,expression);
         Scanner scan = new Scanner(System.in);
         String inputString = scan.nextLine();
+        inputString = inputString.toLowerCase();
         if (!inputString.equals(answer))  {
             Engine.loose(inputString, answer, name);
             return inputString;
