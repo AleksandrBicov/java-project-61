@@ -2,7 +2,7 @@
 /shelf/
 /.idea/workspace.xml
 # Ignore Gradle project-specific cache directory
-.gradle
+app/.gradle
 
 # Ignore Gradle build output directory
 build
