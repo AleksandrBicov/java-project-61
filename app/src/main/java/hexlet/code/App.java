@@ -1,7 +1,6 @@
 package hexlet.code;
 
 import hexlet.code.games.*;
-
 import java.util.Scanner;
 
 final class App {
@@ -32,7 +31,7 @@ final class App {
                 System.out.println("Game exit");
                 break;
             case  (1):
-                Cli.askName();
+                Engine.askName();
                 break;
             case  (2):
                 Even.even();
