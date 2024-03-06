@@ -5,34 +5,30 @@ import java.util.Scanner;
 public final class Engine {
     private Engine() {
     }
-    public static String engine(String question,String expression,String answer,int index) {
-        String name = Cli.name;
-        hello(question,expression);
+    public static void engine(final String question, final String game[][]) {
+        String name = Engine.name;
+        final int repeat = 3;
+        for (int index = 0; index < repeat; index++) {
+        hello(question, game[index][0]);
         Scanner scan = new Scanner(System.in);
         String inputString = scan.nextLine();
         inputString = inputString.toLowerCase();
-        if (!inputString.equals(answer))  {
-            Engine.loose(inputString, answer, name);
-            return inputString;
+        if (!inputString.equals(game[index][1]))  {
+            Engine.loose(inputString, game[index][1], name);
+            return;
         }
         System.out.println("Correct!");
-        Congratulations(index);
-        return inputString;
+       }
+        System.out.println("Congratulations," + name + "!");
     }
-    public static int engine(String question,String expression,int answer,int index) {
-        String name = Cli.name;
-        hello(question,expression);
-        Scanner scan = new Scanner(System.in);
-        int input = scan.nextInt();
-        String inputString = "" + input ;
-        String answerToString = "" + answer;
-        if (input != answer) {
-            Engine.loose(inputString, answerToString, name);
-            return input;
-        }
-        System.out.println("Correct!");
-        Congratulations(index);
-        return input;
+    private static String name;
+    public static void askName() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to the Brain Games!");
+        System.out.println("May I have your name?");
+        name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
+
     }
     public static void hello(final String question, final String expression) {
         System.out.println(question);
@@ -45,11 +41,5 @@ public final class Engine {
                 + "(. Correct answer was" + " '" + answer + " '.\n"
                 + "Let's try again," + name + "!");
     }
-    public static void Congratulations(int index) {
-        String name = Cli.name;
-        final int repeat = 2;
-        if (index == repeat) {
-            System.out.println("Congratulations," + name + "!");
-        }
-    }
+
 }

@@ -1,6 +1,5 @@
 plugins {
     application
-    id("java")
     checkstyle
 }
 
@@ -12,10 +11,6 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-}
 
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
@@ -23,8 +18,4 @@ tasks.getByName("run", JavaExec::class) {
 
 checkstyle {
     toolVersion = "10.3.3"
-}
-
-tasks.test {
-    useJUnitPlatform()
 }

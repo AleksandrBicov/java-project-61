@@ -50,7 +50,7 @@ final class App {
                 Prime.prime();
                 break;
             default:
-                break;
+                throw new RuntimeException("Unknown input: " + selection);
         }
     }
 }

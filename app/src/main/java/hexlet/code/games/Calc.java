@@ -1,33 +1,32 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
-
-import java.util.Scanner;
 
 public final class  Calc {
     private Calc() {
     }
     public static void calc() {
-        Cli.askName();
+        Engine.askName();
         final int repeat = 3;
+        final int finalGenerate = 10;
+        String question = "What is the result of the expression?";
+        String[][] game = new String[repeat][2];
         for (int index = 0; index < repeat; index++) {
-            int randomValue = Utils.generateNumber(1, 10);
-            int randomValue1 = Utils.generateNumber(1, 10);
-            int randomOperator = Utils.generateNumber(1, 3);
+            int randomValue = Utils.generateNumber(1, finalGenerate);
+            int randomValue1 = Utils.generateNumber(1, finalGenerate);
+            int randomOperator = Utils.generateNumber(1, repeat);
             char operator = " +-*".charAt(randomOperator);
-            String question = "What is the result of the expression?";
-            String expression = "" + randomValue + operator + randomValue1;
-            int answer = gameCalc(randomValue, randomValue1, operator);
-            int input = Engine.engine(question, expression, answer,index);
-            if (input != answer) {
-                return;
-            }
+            game[index][0] = "" + randomValue + operator + randomValue1;
+            game[index][1] = gameCalc(randomValue, randomValue1, operator);
         }
+        Engine.engine(question, game);
+
     }
-    public static int gameCalc(int randomValue,int randomValue1,char operator ){
+    public static String gameCalc(final int randomValue, final int randomValue1,
+                                  final char operator) {
         int answer = 0;
+        String answerToString;
         switch (operator) {
             case ('+'):
                 answer = randomValue + randomValue1;
@@ -41,6 +40,7 @@ public final class  Calc {
             default:
                 break;
         }
-        return answer;
+        answerToString = "" + answer;
+        return answerToString;
     }
 }

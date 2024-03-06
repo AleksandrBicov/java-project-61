@@ -8,20 +8,20 @@ public final class Prime {
     private Prime() {
     }
     public static void prime() {
-        Cli.askName();
-        final int repeat = 3;
-        for (int index = 0; index < repeat; index++) {
-            int randomValue = Utils.generateNumber(1, 500);
-            String question =
-               "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-            String expression = "" + randomValue;
-            String answer = gamePrime(randomValue);
-            String input = Engine.engine(question, expression, answer,index);
-            input = input.toLowerCase();
-            if (!input.equals(answer)) {
-                return;
-            }
-        }
+//        Cli.askName();
+//        final int repeat = 3;
+//        for (int index = 0; index < repeat; index++) {
+//            int randomValue = Utils.generateNumber(1, 500);
+//            String question =
+//               "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+//            String expression = "" + randomValue;
+//            String answer = gamePrime(randomValue);
+////            String input = Engine.engine(question, expression, answer);
+////            input = input.toLowerCase();
+////            if (!input.equals(answer)) {
+////                return;
+////            }
+//        }
     }
     public static String gamePrime(int randomValue) {
         String answer;

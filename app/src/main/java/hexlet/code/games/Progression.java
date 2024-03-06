@@ -29,10 +29,8 @@ final public class Progression {
             String arr3 = arr2.replace(",", "");
             String expression = arr3.replace(" 0", " ..");
             int answer = randomValue * randomValue2 + randomValue1;
-            int input = Engine.engine(question, expression, answer,index);
-            if (input != answer) {
-                return;
-            }
+         //   int input = Engine.engine(question, expression, answer,index);
+
         }
     }
 }

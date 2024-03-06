@@ -18,10 +18,7 @@ public final class Gcd {
                 "Find the greatest common divisor of given numbers.";
             String expression =  randomValue + " " + randomValue1;
             int answer = gameGcd(randomValue, randomValue1);
-            int input = Engine.engine(question, expression, answer,index);
-            if (input != answer) {
-                return;
-            }
+          //  int input = Engine.engine(question, expression, answer,index);
         }
     }
     public static int gameGcd(int randomValue, int randomValue1){
