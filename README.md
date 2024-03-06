@@ -15,6 +15,7 @@
 5. Определение простого числа: игроку показывается число, и он должен решить, является ли оно простым или нет. Эта игра развивает способность к определению простых чисел и умение их отличать от составных чисел.
 
 «Игры разума» - это занимательный и полезный способ тренировать мозг, развивать логическое мышление и математические навыки.
+
 [![asciicast](https://asciinema.org/a/nPiTNDGG08unRMOHhtFf3dAzy.svg)](https://asciinema.org/a/nPiTNDGG08unRMOHhtFf3dAzy)
 [![asciicast](https://asciinema.org/a/ov6mNdz6MGmKctXk12Gc5LrcH.svg)](https://asciinema.org/a/ov6mNdz6MGmKctXk12Gc5LrcH)
 [![asciicast](https://asciinema.org/a/a3Q05ZBxMDcrZ30l8BoeRzd1K.svg)](https://asciinema.org/a/a3Q05ZBxMDcrZ30l8BoeRzd1K)
