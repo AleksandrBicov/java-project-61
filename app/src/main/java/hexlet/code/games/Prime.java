@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
@@ -8,20 +7,17 @@ public final class Prime {
     private Prime() {
     }
     public static void prime() {
-//        Cli.askName();
-//        final int repeat = 3;
-//        for (int index = 0; index < repeat; index++) {
-//            int randomValue = Utils.generateNumber(1, 500);
-//            String question =
-//               "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-//            String expression = "" + randomValue;
-//            String answer = gamePrime(randomValue);
-////            String input = Engine.engine(question, expression, answer);
-////            input = input.toLowerCase();
-////            if (!input.equals(answer)) {
-////                return;
-////            }
-//        }
+        Engine.askName();
+        String question =
+                "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        final int repeat = 3;
+        String[][] game = new String[repeat][2];
+        for (int index = 0; index < repeat; index++) {
+            int randomValue = Utils.generateNumber(1, 500);
+            game[index][0] = "" + randomValue;
+            game[index][1] = gamePrime(randomValue);
+        }
+        Engine.engine(question, game);
     }
     public static String gamePrime(int randomValue) {
         String answer;
