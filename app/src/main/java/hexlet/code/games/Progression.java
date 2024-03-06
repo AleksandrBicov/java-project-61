@@ -8,11 +8,11 @@ final public class Progression {
     }
     public static void progression() {
         Engine.askName();
-        final int repeat = 3;
+
         final int newArr = 10;
         String question = "What number is missing in the progression?";
-        String[][] game = new String[repeat][2];
-        for (int index = 0; index < repeat; index++) {
+        String[][] game = new String[Engine.ROUNDS][2];
+        for (int index = 0; index < Engine.ROUNDS; index++) {
             int[] array = new int[newArr];
             int randomValue = Utils.generateNumber(1, 10);
             int randomValue1 = Utils.generateNumber(1, 10);

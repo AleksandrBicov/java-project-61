@@ -7,9 +7,8 @@ public final class Even {
     public static void even() {
         Engine.askName();
         String question = "Answer 'yes' if the number is input, otherwise answer 'no'.";
-        final int repeat = 3;
-        String[][] game = new String[repeat][2];
-        for (int index = 0; index < repeat; index++) {
+        String[][] game = new String[Engine.ROUNDS][2];
+        for (int index = 0; index < Engine.ROUNDS; index++) {
             int randomValue = Utils.generateNumber(1, 10);
             game[index][0] = "" + randomValue;
             game[index][1] = gameEven(randomValue);

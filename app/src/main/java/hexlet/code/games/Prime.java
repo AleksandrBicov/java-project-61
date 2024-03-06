@@ -10,9 +10,8 @@ public final class Prime {
         Engine.askName();
         String question =
                 "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        final int repeat = 3;
-        String[][] game = new String[repeat][2];
-        for (int index = 0; index < repeat; index++) {
+        String[][] game = new String[Engine.ROUNDS][2];
+        for (int index = 0; index < Engine.ROUNDS; index++) {
             int randomValue = Utils.generateNumber(1, 500);
             game[index][0] = "" + randomValue;
             game[index][1] = gamePrime(randomValue);

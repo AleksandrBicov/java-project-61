@@ -11,10 +11,9 @@ public final class Gcd {
         Engine.askName();
         String question =
                 "Find the greatest common divisor of given numbers.";
-        final int repeat = 3;
         final int finalGenerate = 100;
-        String[][] game = new String[repeat][2];
-        for (int index = 0; index < repeat; index++) {
+        String[][] game = new String[Engine.ROUNDS][2];
+        for (int index = 0; index < Engine.ROUNDS; index++) {
             int randomValue = Utils.generateNumber(1, finalGenerate);
             int randomValue1 = Utils.generateNumber(1, finalGenerate);
             game[index][0] = randomValue + " " + randomValue1;

@@ -8,14 +8,13 @@ public final class  Calc {
     }
     public static void calc() {
         Engine.askName();
-        final int repeat = 3;
         final int finalGenerate = 10;
         String question = "What is the result of the expression?";
-        String[][] game = new String[repeat][2];
-        for (int index = 0; index < repeat; index++) {
+        String[][] game = new String[Engine.ROUNDS][2];
+        for (int index = 0; index < Engine.ROUNDS; index++) {
             int randomValue = Utils.generateNumber(1, finalGenerate);
             int randomValue1 = Utils.generateNumber(1, finalGenerate);
-            int randomOperator = Utils.generateNumber(1, repeat);
+            int randomOperator = Utils.generateNumber(1, Engine.ROUNDS);
             char operator = " +-*".charAt(randomOperator);
             game[index][0] = "" + randomValue + operator + randomValue1;
             game[index][1] = gameCalc(randomValue, randomValue1, operator);
