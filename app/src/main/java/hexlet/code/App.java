@@ -31,7 +31,7 @@ final class App {
                 System.out.println("Game exit");
                 break;
             case  (1):
-                Engine.askName();
+                Cli.askName();
                 break;
             case  (2):
                 Even.even();
