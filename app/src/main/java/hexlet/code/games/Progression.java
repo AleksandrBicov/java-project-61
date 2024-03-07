@@ -16,9 +16,10 @@ final public class Progression {
             int first = Utils.generateNumber(1, 10);
             int step = Utils.generateNumber(1, 10);
             String[] progression = makeProgression(first, step, PROGRESSION_LENGTH);
+            String answer = progression[hiddenMemberIndex];
             progression[hiddenMemberIndex] = "..";
             game[index][0] = String.join(" ", progression);
-            game[index][1] = hiddenMemberIndex * step + first + "";
+            game[index][1] = answer;
         }
 
         Engine.engine(question, game);
