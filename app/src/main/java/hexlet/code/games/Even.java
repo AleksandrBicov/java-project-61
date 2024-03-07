@@ -5,7 +5,7 @@ public final class Even {
     private Even() {
     }
     public static void even() {
-        Engine.askName();
+
         String question = "Answer 'yes' if the number is input, otherwise answer 'no'.";
         String[][] game = new String[Engine.ROUNDS][2];
         for (int index = 0; index < Engine.ROUNDS; index++) {

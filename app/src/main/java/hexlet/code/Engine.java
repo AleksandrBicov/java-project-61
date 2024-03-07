@@ -7,6 +7,7 @@ public final class Engine {
     }
     public static final int ROUNDS = 3;
     public static void engine(final String question, final String game[][]) {
+        Engine.askName();
         String name = Engine.name;
         final int repeat = 3;
         for (int index = 0; index < repeat; index++) {

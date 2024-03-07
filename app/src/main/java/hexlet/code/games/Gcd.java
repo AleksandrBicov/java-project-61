@@ -8,7 +8,6 @@ public final class Gcd {
     private Gcd() {
     }
     public static void gcd() {
-        Engine.askName();
         String question =
                 "Find the greatest common divisor of given numbers.";
         final int finalGenerate = 100;

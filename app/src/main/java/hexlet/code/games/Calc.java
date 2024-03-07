@@ -7,7 +7,6 @@ public final class  Calc {
     private Calc() {
     }
     public static void calc() {
-        Engine.askName();
         final int finalGenerate = 10;
         String question = "What is the result of the expression?";
         String[][] game = new String[Engine.ROUNDS][2];

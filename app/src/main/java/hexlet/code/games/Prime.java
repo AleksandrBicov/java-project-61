@@ -7,7 +7,6 @@ public final class Prime {
     private Prime() {
     }
     public static void prime() {
-        Engine.askName();
         String question =
                 "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] game = new String[Engine.ROUNDS][2];

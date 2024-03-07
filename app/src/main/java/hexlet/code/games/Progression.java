@@ -7,8 +7,6 @@ final public class Progression {
     private Progression() {
     }
     public static void progression() {
-        Engine.askName();
-
         final int newArr = 10;
         String question = "What number is missing in the progression?";
         String[][] game = new String[Engine.ROUNDS][2];
