@@ -4,8 +4,6 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public final class Prime {
-    private Prime() {
-    }
     public static void prime() {
         final var min = 1;
         final var max = 500;

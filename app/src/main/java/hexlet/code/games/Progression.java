@@ -5,8 +5,6 @@ import hexlet.code.Utils;
 import java.util.Arrays;
 final public class Progression {
 
-    private Progression() {
-    }
     public static void progression() {
         final var min = 1;
         final var max = 10;
