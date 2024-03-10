@@ -8,18 +8,22 @@ final public class Progression {
     private Progression() {
     }
     public static void progression() {
+        final var min = 1;
+        final var max = 10;
         final int PROGRESSION_LENGTH = 10;
         String question = "What number is missing in the progression?";
         String[][] game = new String[Engine.ROUNDS][2];
-        for (int index = 0; index < Engine.ROUNDS; index++) {
-            int hiddenMemberIndex = Utils.generateNumber(1, 10);
-            int first = Utils.generateNumber(1, 10);
-            int step = Utils.generateNumber(1, 10);
+
+        for (String[] roundData : game) {
+            int hiddenMemberIndex = Utils.generateNumber(min, max);
+            int first = Utils.generateNumber(min, max);
+            int step = Utils.generateNumber(min, max);
             String[] progression = makeProgression(first, step, PROGRESSION_LENGTH);
             String answer = progression[hiddenMemberIndex];
             progression[hiddenMemberIndex] = "..";
-            game[index][0] = String.join(" ", progression);
-            game[index][1] = answer;
+
+            roundData[0] = String.join(" ", progression);
+            roundData[1] =  answer;
         }
 
         Engine.engine(question, game);
