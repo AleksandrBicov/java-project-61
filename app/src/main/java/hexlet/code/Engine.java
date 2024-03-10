@@ -15,17 +15,21 @@ public final class Engine {
             System.out.println(question);
             System.out.println("question : " + roundData[0]);
             System.out.println("Your answer: ");
+
             Scanner scan = new Scanner(System.in);
             String inputString = scan.nextLine();
             inputString = inputString.toLowerCase();
+
             if (!inputString.equals(roundData[1]))  {
                 System.out.println("'" + inputString + "' is wrong answer ;"
                 + "(. Correct answer was" + " '" + roundData[1] + " '.\n"
                 + "Let's try again," + name + "!");
                 return;
             }
+
             System.out.println("Correct!");
         }
+
         System.out.println("Congratulations," + name + "!");
     }
 }
