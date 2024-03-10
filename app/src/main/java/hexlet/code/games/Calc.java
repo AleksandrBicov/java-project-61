@@ -5,14 +5,17 @@ import hexlet.code.Utils;
 
 public final class  Calc {
     public static void calc() {
-        final int finalGenerate = 10;
+        final var min = 1;
+        final var max = 10;
+        final var minChar = 0;
+        final var maxChar = 2;
         String question = "What is the result of the expression?";
         String[][] game = new String[Engine.ROUNDS][2];
 
         for (String[] roundData : game) {
-            int randomValue = Utils.generateNumber(1, finalGenerate);
-            int randomValue1 = Utils.generateNumber(1, finalGenerate);
-            int randomOperator = Utils.generateNumber(0, 2);
+            int randomValue = Utils.generateNumber(min, max);
+            int randomValue1 = Utils.generateNumber(min, max);
+            int randomOperator = Utils.generateNumber(minChar, maxChar);
             final char[] operators = {'+', '-', '*'};
 
             roundData[0] = "" + randomValue + operators[randomOperator] + randomValue1;
