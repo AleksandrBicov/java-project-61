@@ -9,14 +9,14 @@ public final class  Calc {
         String question = "What is the result of the expression?";
         String[][] game = new String[Engine.ROUNDS][2];
 
-        for (int index = 0; index < Engine.ROUNDS; index++) {
+        for (String[] roundData : game) {
             int randomValue = Utils.generateNumber(1, finalGenerate);
             int randomValue1 = Utils.generateNumber(1, finalGenerate);
             int randomOperator = Utils.generateNumber(0, 2);
             final char[] operators = {'+', '-', '*'};
 
-            game[index][0] = "" + randomValue + operators[randomOperator] + randomValue1;
-            game[index][1] = String.valueOf(gameCalc(randomValue, randomValue1, operators[randomOperator]));
+            roundData[0] = "" + randomValue + operators[randomOperator] + randomValue1;
+            roundData[1] = String.valueOf(gameCalc(randomValue, randomValue1, operators[randomOperator]));
         }
 
         Engine.engine(question, game);

@@ -26,7 +26,7 @@ public final class Gcd {
             randomValue1 = randomValue;
             randomValue = tmp;
         }
-        String answer = "" + randomValue1;
+        String answer = String.valueOf(randomValue1) ;
         return answer;
     }
 }
