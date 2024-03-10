@@ -7,24 +7,19 @@ public final class Prime {
     private Prime() {
     }
     public static void prime() {
+        final var min = 1;
+        final var max = 500;
         String question =
                 "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] game = new String[Engine.ROUNDS][2];
-        for (int index = 0; index < Engine.ROUNDS; index++) {
-            int randomValue = Utils.generateNumber(1, 500);
-            game[index][0] = "" + randomValue;
-            game[index][1] = gamePrime(randomValue);
+
+        for (String[] roundData : game) {
+            int randomValue = Utils.generateNumber(min, max);
+            roundData[0] = "" + randomValue;
+            roundData[1] = isSimple(randomValue) ? "yes" : "no";
         }
+
         Engine.engine(question, game);
-    }
-    public static String gamePrime(int randomValue) {
-        String answer;
-        if (isSimple(randomValue)) {
-            answer = "yes";
-        } else {
-            answer = "no";
-        }
-        return answer;
     }
     public static boolean isSimple(final int number) {
         if (number < 2) {
