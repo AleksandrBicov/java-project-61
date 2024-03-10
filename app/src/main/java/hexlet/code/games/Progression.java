@@ -2,6 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import hexlet.code.Utils;
+import java.util.Arrays;
 final public class Progression {
 
     private Progression() {
@@ -22,7 +23,7 @@ final public class Progression {
             progression[hiddenMemberIndex] = "..";
 
             roundData[0] = String.join(" ", progression);
-            roundData[1] =  answer;
+            roundData[1] = answer;
         }
 
         Engine.engine(question, game);
