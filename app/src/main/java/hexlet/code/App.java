@@ -9,12 +9,13 @@ final class App {
     public static void main(final String[] args) {
         gameSelection();
     }
-    private static int selection;
     public static void gameSelection() {
-        final int three = 3;
-        final int four = 4;
-        final int five = 5;
-        final int six = 6;
+        int selection;
+        final int even = 2;
+        final int calc = 3;
+        final int gcd = 4;
+        final int progression = 5;
+        final int prime = 6;
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet ");
         System.out.println("2 - Even ");
@@ -33,19 +34,19 @@ final class App {
             case  (1):
                 Cli.askName();
                 break;
-            case  (2):
+            case  (even):
                 Even.even();
                 break;
-            case  (three):
+            case  (calc):
                 Calc.calc();
                 break;
-            case  (four):
+            case  (gcd):
                 Gcd.gcd();
                 break;
-            case  (five):
+            case  (progression):
                 Progression.progression();
                 break;
-            case  (six):
+            case  (prime):
                 Prime.prime();
                 break;
             default:
