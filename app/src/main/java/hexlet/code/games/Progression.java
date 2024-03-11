@@ -8,7 +8,7 @@ public final class Progression {
     public static void progression() {
         final var min = 1;
         final var max = 10;
-        final int PROGRESSION_LENGTH = 10;
+        final int progressionLength = 10;
         String question = "What number is missing in the progression?";
         String[][] game = new String[Engine.ROUNDS][2];
 
@@ -16,7 +16,7 @@ public final class Progression {
             int hiddenMemberIndex = Utils.generateNumber(min, max);
             int first = Utils.generateNumber(min, max);
             int step = Utils.generateNumber(min, max);
-            String[] progression = makeProgression(first, step, PROGRESSION_LENGTH);
+            String[] progression = makeProgression(first, step, progressionLength);
             String answer = progression[hiddenMemberIndex];
             progression[hiddenMemberIndex] = "..";
 
