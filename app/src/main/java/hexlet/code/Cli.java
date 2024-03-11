@@ -9,6 +9,6 @@ public final class Cli {
         System.out.println("May I have your name?");
         String name = scanner.nextLine();
         System.out.println("Hello, " + name + "!");
-         scanner.close();
+        scanner.close();
     }
 }

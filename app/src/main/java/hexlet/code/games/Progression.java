@@ -2,8 +2,8 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import hexlet.code.Utils;
-import java.util.Arrays;
-final public class Progression {
+
+public final class Progression {
 
     public static void progression() {
         final var min = 1;

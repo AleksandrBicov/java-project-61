@@ -27,7 +27,7 @@ public final class Gcd {
             randomValue1 = randomValue;
             randomValue = tmp;
         }
-        return randomValue1 ;
+        return randomValue1;
     }
 }
 

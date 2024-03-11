@@ -22,8 +22,8 @@ public final class Engine {
 
             if (!inputString.equals(roundData[1]))  {
                 System.out.println("'" + inputString + "' is wrong answer ;"
-                + "(. Correct answer was" + " '" + roundData[1] + " '.\n"
-                + "Let's try again," + name + "!");
+                    + "(. Correct answer was" + " '" + roundData[1] + " '.\n"
+                    + "Let's try again," + name + "!");
                 return;
             }
 
