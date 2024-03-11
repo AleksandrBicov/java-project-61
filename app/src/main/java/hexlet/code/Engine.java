@@ -13,7 +13,7 @@ public final class Engine {
 
         for (String[] roundData : game) {
             System.out.println(question);
-            System.out.println("Question:" + roundData[0]);
+            System.out.println("Question: " + roundData[0]);
             System.out.println("Your answer: ");
 
             Scanner scan = new Scanner(System.in);
