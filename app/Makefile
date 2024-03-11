@@ -1,3 +1,5 @@
+build:
+
 install:
 	./gradlew installdist
 run-dist:
