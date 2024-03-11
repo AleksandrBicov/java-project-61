@@ -1,6 +1,7 @@
-
 package hexlet.code;
+
 import java.util.Scanner;
+
 public final class Cli {
     public static void askName() {
         Scanner scanner = new Scanner(System.in);
