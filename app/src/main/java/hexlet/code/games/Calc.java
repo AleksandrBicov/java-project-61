@@ -38,7 +38,7 @@ public final class  Calc {
                 answer = randomValue * randomValue1;
                 break;
             default:
-                break;
+                System.out.println("Unknown operator: " + operator);
         }
         return answer;
     }
