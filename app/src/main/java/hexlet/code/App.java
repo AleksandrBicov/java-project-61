@@ -4,8 +4,6 @@ import hexlet.code.games.*;
 import java.util.Scanner;
 
 final class App {
-    private App() {
-    }
     public static void main(final String[] args) {
         gameSelection();
     }
