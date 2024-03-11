@@ -1,5 +1,3 @@
-build:
-		build is up to date
 install:
 	./gradlew installdist
 run-dist:
