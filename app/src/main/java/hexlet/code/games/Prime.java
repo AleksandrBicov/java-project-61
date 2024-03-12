@@ -14,12 +14,12 @@ public final class Prime {
         for (String[] roundData : game) {
             int randomValue = Utils.generateNumber(min, max);
             roundData[0] = "" + randomValue;
-            roundData[1] = isSimple(randomValue) ? "yes" : "no";
+            roundData[1] = isPrime(randomValue) ? "yes" : "no";
         }
 
         Engine.engine(question, game);
     }
-    public static boolean isSimple(final int number) {
+    public static boolean isPrime(final int number) {
         if (number < 2) {
             return false;
         }
