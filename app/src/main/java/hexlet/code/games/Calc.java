@@ -18,7 +18,7 @@ public final class  Calc {
             int randomOperator = Utils.generateNumber(minChar, maxChar);
             final char[] operators = {'+', '-', '*'};
 
-            roundData[0] = "" + randomValue + operators[randomOperator] + randomValue1;
+            roundData[0] =randomValue + " " + operators[randomOperator] + " " + randomValue1;
             roundData[1] = String.valueOf(gameCalc(randomValue, randomValue1, operators[randomOperator]));
         }
 
