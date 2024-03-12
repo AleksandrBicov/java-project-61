@@ -5,7 +5,7 @@ public final class Even {
     public static void even() {
         final var min = 1;
         final var max = 10;
-        String question = "Answer 'yes' if the number is input, otherwise answer 'no'.";
+        String question = " Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[][] game = new String[Engine.ROUNDS][2];
 
         for (String[] roundData : game) {
