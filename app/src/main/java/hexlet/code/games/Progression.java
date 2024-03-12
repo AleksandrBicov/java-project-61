@@ -13,7 +13,7 @@ public final class Progression {
         String[][] game = new String[Engine.ROUNDS][2];
 
         for (String[] roundData : game) {
-            int hiddenMemberIndex = Utils.generateNumber(min, max);
+            int hiddenMemberIndex = Utils.generateNumber(min, max - 1);
             int first = Utils.generateNumber(min, max);
             int step = Utils.generateNumber(min, max);
             String[] progression = makeProgression(first, step, progressionLength);
