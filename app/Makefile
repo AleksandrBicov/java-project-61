@@ -8,3 +8,4 @@ clean:
 	./gradlew clean
 lint:
 	./gradlew checkstyleMain
+.PHONY: build
